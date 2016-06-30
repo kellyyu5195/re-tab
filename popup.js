@@ -1,4 +1,4 @@
-if(document.getElementById('save') != null) {
+if(document.getElementById('save') !== null) {
 	document.getElementById('save').onclick = function(e) {
 		CreateAlarm(document.getElementById('input').value);
 	};
@@ -12,7 +12,7 @@ document.onkeypress = function(e) {
 	}
 }
 
-if(document.getElementById('view') != null) {
+if(document.getElementById('view') !== null) {
 	document.getElementById('view').onclick = function(e) {
 		showAlarms();
 	};
@@ -54,7 +54,7 @@ function isInvalidInput(userInput){
 	for (i=0; i < inpList.length; i++) {
 		if (inpList[i] == '') return true;
 	}
-	if (inpList[1] == 0 && inpList[1] != "00") return true;
+	if (inpList[1] == 0 && inpList[1] !== "00") return true;
 	if (inpList[0] > 23) return true;
 	if (inpList[1] > 59) return true;
 
@@ -86,7 +86,7 @@ function getTime(TIME) {
 }
 
 function clearDisplay () {
-	if (document.getElementById('all-alarms') != null) {
+	if (document.getElementById('all-alarms') !== null) {
 		document.getElementById('all-alarms').remove();
 	}
 }
@@ -161,7 +161,7 @@ function nowButt(name) {
 }
 
 function newSetup(name) {
-	if(document.getElementById('holder') != null) {
+	if(document.getElementById('holder') !== null) {
 		document.getElementById('holder').remove();
 	}
 	
@@ -205,7 +205,7 @@ function newSetup(name) {
 
 function getHostName(url) {
     var match = url.match(/:\/\/(www[0-9]?\.)?(.[^/:]+)/i);
-    if (match != null && match.length > 2 && typeof match[2] === 'string' && match[2].length > 0) {
+    if (match !== null && match.length > 2 && typeof match[2] === 'string' && match[2].length > 0) {
     return match[2];
     }
     else {

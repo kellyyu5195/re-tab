@@ -6,7 +6,7 @@ chrome.alarms.onAlarm.addListener(function(alarm) {
 	chrome.windows.get(windID, function(w) {
 		if(chrome.runtime.lastError) {
 			chrome.tabs.create({windowId: chrome.windows.WINDOW_ID_CURRENT, url : alURL});
-		} else if (chrome.windows.WINDOW_ID_CURRENT != undefined) {
+		} else if (chrome.windows.WINDOW_ID_CURRENT !== undefined) {
 			chrome.tabs.create({windowId: w.id, url : alURL});
 		} else {
 			chome.windows.create({ url: alURL});
