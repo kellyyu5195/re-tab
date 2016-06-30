@@ -7,3 +7,5 @@ up at the specified time. Other features include viewing alarms, editing alarms,
 deleting alarms and snoozing alarms (default 10 minutes).
 
 Chrome APIs used in this extension: alarms, notifications, storage, windows, tabs
+
+Other resources: moment.js from http://momentjs.com/
